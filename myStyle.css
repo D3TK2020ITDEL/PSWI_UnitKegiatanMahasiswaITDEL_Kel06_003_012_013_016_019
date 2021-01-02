@@ -1,0 +1,49 @@
+<style type="text/css">
+body{
+  overflow-y: hidden;
+  margin:0;
+  padding: 0;
+  font-family: verdana;
+  background-color: #8B0000;
+}
+form{
+  font-family: arial;
+  background-image: url('del.jpg');
+  width: 300px;
+  margin: 180px auto;
+  padding: 30px;
+  text-align: right;
+  color: #f7f6fa;
+  border-radius: 60px 10px;
+  box-shadow: 2px 2px 7px #e93d3d;
+}
+input{
+  margin: 10px;
+}
+input.login{
+  background-color: #41a7f0;
+  color: #e7e7e7;
+  font-family: verdana;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin: 30px 10px auto 0px;
+  text-transform: uppercase;
+  transition: .2s;
+}
+input.login:hover{
+  background-color: #93A4B0;
+  color: #1b0e63;
+}
+p{
+  text-align:center;
+  margin: 50px auto;
+  margin-top: 10px;
+  padding: 10px;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: verdana;
+  background-color:transparent;
+  border-radius: 20px;
+}
+</style>

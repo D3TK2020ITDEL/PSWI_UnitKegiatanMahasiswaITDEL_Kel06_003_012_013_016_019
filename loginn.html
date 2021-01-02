@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: rgb(13, 14, 14);
+  color: rgb(63, 13, 243);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 10px;
+  background-color: #00ff0d;
+  float: right;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(255, 255, 255); /* Fallback color */
+  background-color: rgba(255, 255, 255, 0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: transparent;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+     
+
+  }
+}
+</style>
+<script>
+    function validasi(){
+      var name = document.getElementById("uname").value
+      var nim = document.getElementById("nim").value
+      var email = document.getElementById("psw").value
+      var password = document.getElementById("pass").value
+      var password1 = document.getElementById("pass1").value
+      var motif = document.getElementById("motif").value
+
+      if(name == ""){
+           prompt("Tolong masukkan nama anda");
+      }
+      if(nim == ''){
+           prompt("tolong masukkan nim anda");
+      }
+      if(email == ""){
+           prompt("tolong masukkan alamat email anda");
+      }
+      if(password == ""){
+           prompt("harap masukkan password anda");
+      }
+      if(password1 != password){
+           prompt("password yang anda masukkan tidak valid");
+      }
+      if(motif == ""){
+           prompt("Motivasi tolong di isi");
+      }
+    }
+</script>
+</head>
+<body>
+    <body background = "Background.jpg"></body>
+<body>
+
+    <b><h2><center> Form Pendaftaran </center></h2></b>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <a href="index.html">Home</a>
+<center><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Daftar</button></center>
+
+<div id="id01" class="modal">
+  
+    <form class="modal-content animate" action="selamat.html" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="" alt="" class="avatar">
+      </div>
+      <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+  
+
+    <div class="container">
+      <h1>Form Pendaftaran</h1>
+      <p>Silahkan isi Nama,Nim,Email,Program studi dan Pilih UKM</p>
+      <hr>
+      <label for="uname"><b>Nama Lengkap</b></label>
+      <input type="text" placeholder="Nama Lengkap anda" id="uname">
+
+      <label for="nim"><b>Nim</b></label>
+      <input type="text" placeholder="Nim Lengkap anda" id="nim">
+
+      <label for="psw"><b>Email</b></label>
+      <input type="text" placeholder="example@gmail.com" id="psw">
+
+      <label for="psw-repeat"><b>Program Studi</b></label>
+      <div class="custom-select" style="width:200px;">
+  <select>
+    <option value="0">Pilih Program Studi</option>
+    <option value="1">D3 Teknologi Informasi</option>
+    <option value="2">D3 Teknologi Komputer</option>
+    <option value="3">D4 Teknologi Rekayasa Perangkat Lunak</option>
+    <option value="4">S1 Informatika</option>
+    <option value="5">S1 Sistem Informasi</option>
+    <option value="6">S1 Teknik Elektro</option>
+    <option value="7">S1 Manajemen Rekayasa</option>
+    <option value="8">S1 Teknik Bioproses</option>
+    
+  </select>
+</div> <br>
+    
+    
+    <label for="psw-repeat"><b>Jenis UKM</b></label>
+    <div class="custom-select" style="width:200px;">
+  <select>
+    <option value="0">Pilih UKM</option>
+    <option value="1">3DC</option>
+    <option value="2">Paduan suara Mahasiswa</option>
+    <option value="3">Paduan Gitar Mahasiswa</option>
+    <option value="4">Del programming Club</option>
+    <option value="5">English Club</option>
+    <option value="6">Basket club</option>
+    <option value="7">Robotic club</option>
+    <option value="8">Mobile Development</option>
+    <option value="8">Kesehatan</option>
+  </select>
+</div> <br>
+<body background = "/img/Background.jpg">
+</script>
+	   <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" id="pass">
+	  
+	   <label for="psw"><b>Entry Password</b></label>
+      <input type="password" placeholder="Entry Password" id="pass1" >
+        
+       <label for="psw"><b>Motivasi</b></label>
+      <input type="text" placeholder="motivasi anda" id="motif">
+      <label>
+	  <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+		<button type="submit" onclick="validasi()" a href="selamat.html">Submit</button>
+	  </label>
+        
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+  
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+
+</html>

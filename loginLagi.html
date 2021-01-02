@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Registrasi</title>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+	
+</head>
+
+<body>
+	<form action="index.html" method="get" id="myForm" onsubmit=" return validasi()">
+		<p><marquee>Welcome To Proyek </marquee></p>
+		Username <input type="text" name="username" placeholder="username">
+		Password <input type="password" name="password" placeholder="password">
+		<input href="profile.html" class="login "  type="submit" name="submit" value="login">
+		<input type="reset" class="login" name="reset" value="Reset"/>
+	  </form>
+	</body>
+	<script type="text/javascript">
+	  function validasi(){
+		var username = document.forms["myForm"]["username"].value;
+		var password = document.forms["myForm"]["password"].value;
+		if( username == "mahasiswa" && password == "mahasiswa"){
+		  return true;
+		}
+		else if(username =="" || password ==""){
+		  alert("Masukan username dan password Anda");
+		  return false;
+		}
+		else{
+		  alert("Username atau password yang Anda masukan SALAH");
+		  return false;
+		}
+	  }
+	</script>
+	   
+	</body>
+	<script type="text/javascript">
+function validasi_input(form){
+  if (form.username.value == ""){
+    alert("Username masih kosong!");
+    form.username.focus();
+    return (false);
+  }
+return (true);
+}
+</script>
+</script>
+</html>
